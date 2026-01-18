@@ -435,6 +435,10 @@ Para facilitar la revisión del entorno de servidor configurado (Ubuntu + Apache
 
 [https://drive.google.com/file/d/1TXEuvzMpByU9jWRw5DygTmVYpdjVFs4W/view?usp=sharing]
 
+### Adjunto repositorio de la carpeta del backend completo de respaldo
+
+https://github.com/erickalex14/Backend-Drupal-Respaldo 
+
 ## 6.3 Autor
 Nombre: Erick Alexander Chavarrea Macias
 
