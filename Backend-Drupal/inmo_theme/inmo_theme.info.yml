@@ -1,0 +1,19 @@
+name: 'Inmobiliaria Aceternity Theme'
+type: theme
+description: 'Tema Dark Mode Aceternity UI.'
+core_version_requirement: ^10 || ^11
+package: Custom
+
+
+base theme: claro
+
+libraries:
+  - inmo_theme/global-styling
+
+regions:
+  sidebar_menu: 'Sidebar Menu'    # Para el menú lateral verde
+  header: 'Header'                # Para la barra superior blanca (Buscador)
+  breadcrumb: 'Breadcrumb'        # Para las migas de pan
+  content_header: 'Content Header' # (Título y Botones)
+  content: 'Content'              # El contenido principal
+  highlighted: 'Highlighted'      # Mensajes de sistema

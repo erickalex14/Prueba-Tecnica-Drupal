@@ -1,0 +1,83 @@
+uuid: 73cd5d07-1332-4adc-8778-02b0988b53e9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.inmueble.field_agente_responsable
+    - field.field.node.inmueble.field_ciudad
+    - field.field.node.inmueble.field_estado
+    - field.field.node.inmueble.field_fecha_de_disponibilidad
+    - field.field.node.inmueble.field_foto_principal
+    - field.field.node.inmueble.field_precio
+    - node.type.inmueble
+  module:
+    - datetime
+    - image
+    - options
+    - user
+id: node.inmueble.default
+targetEntityType: node
+bundle: inmueble
+mode: default
+content:
+  field_agente_responsable:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_ciudad:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_estado:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_fecha_de_disponibilidad:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_foto_principal:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_precio:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

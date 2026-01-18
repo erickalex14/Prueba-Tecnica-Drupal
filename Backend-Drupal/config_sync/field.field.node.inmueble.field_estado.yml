@@ -1,0 +1,21 @@
+uuid: 20d27352-8cb3-406c-9532-daa368ee8259
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_estado
+    - node.type.inmueble
+  module:
+    - options
+id: node.inmueble.field_estado
+field_name: field_estado
+entity_type: node
+bundle: inmueble
+label: Estado
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

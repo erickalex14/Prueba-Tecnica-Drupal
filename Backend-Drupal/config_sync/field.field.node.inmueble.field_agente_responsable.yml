@@ -1,0 +1,29 @@
+uuid: 00a46225-680c-4d09-8a82-698278a15e83
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agente_responsable
+    - node.type.agente
+    - node.type.inmueble
+id: node.inmueble.field_agente_responsable
+field_name: field_agente_responsable
+entity_type: node
+bundle: inmueble
+label: 'Agente Responsable'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      agente: agente
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: agente
+field_type: entity_reference

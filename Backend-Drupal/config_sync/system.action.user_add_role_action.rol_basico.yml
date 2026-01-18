@@ -1,0 +1,14 @@
+uuid: ff88a844-e8e7-4d40-9191-60947c91704f
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.rol_basico
+  module:
+    - user
+id: user_add_role_action.rol_basico
+label: 'Añade el rol Rol Basico al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: rol_basico

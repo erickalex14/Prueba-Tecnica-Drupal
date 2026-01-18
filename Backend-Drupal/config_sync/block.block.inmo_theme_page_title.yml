@@ -1,0 +1,26 @@
+uuid: 6fe4d101-311f-4fd7-97cf-77e771a7cd70
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - inmo_theme
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: inmo_theme_page_title
+theme: inmo_theme
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  label_display: visible
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

@@ -1,0 +1,9 @@
+uuid: 29ebd403-0825-4331-a05a-b393f076d3c5
+langcode: es
+status: true
+dependencies: {  }
+id: rol_basico
+label: 'Admin RESTFUL'
+weight: 4
+is_admin: false
+permissions: {  }

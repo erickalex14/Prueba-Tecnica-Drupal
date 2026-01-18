@@ -1,0 +1,19 @@
+uuid: c4d6be1c-df02-44a8-8f7b-be2b2744ee90
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ciudad
+    - node.type.inmueble
+id: node.inmueble.field_ciudad
+field_name: field_ciudad
+entity_type: node
+bundle: inmueble
+label: Ciudad
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

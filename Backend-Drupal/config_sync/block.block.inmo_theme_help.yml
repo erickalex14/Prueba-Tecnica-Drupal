@@ -1,0 +1,22 @@
+uuid: 641b7571-6186-4305-96a8-267e2e8eacc0
+langcode: es
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - inmo_theme
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: inmo_theme_help
+theme: inmo_theme
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  label_display: '0'
+  provider: help
+visibility: {  }

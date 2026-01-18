@@ -1,0 +1,38 @@
+uuid: 6a441e61-325b-4f24-86b7-38fffb47f2f0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_foto_perfil
+    - node.type.agente
+  module:
+    - image
+id: node.agente.field_foto_perfil
+field_name: field_foto_perfil
+entity_type: node
+bundle: agente
+label: 'Foto Perfil'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: agentes/fotos
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

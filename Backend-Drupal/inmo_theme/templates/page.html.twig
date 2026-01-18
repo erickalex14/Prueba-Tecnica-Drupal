@@ -1,0 +1,165 @@
+{% if page.sidebar_menu %}
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Panel | Business IT</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <script>
+            tailwind.config = {
+                theme: { extend: { colors: { "primary": "#007a6c", "bg-body": "#f3f4f6", "text-main": "#1e293b" }, fontFamily: { "display": ["Epilogue", "sans-serif"], "body": ["Manrope", "sans-serif"] } } }
+            }
+        </script>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Epilogue:wght@500;600;700&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    </head>
+    <body class="bg-bg-body text-text-main h-screen w-screen overflow-hidden font-body selection:bg-primary selection:text-white">
+        
+        <aside class="fixed top-0 left-0 w-64 h-full bg-[#007a6c] text-white flex flex-col shadow-xl z-50">
+            <div class="h-16 flex items-center px-6 border-b border-white/10 shrink-0">
+                <div class="flex items-center gap-3">
+                    <div class="size-8 bg-white/20 rounded-lg flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-[20px]">apartment</span>
+                    </div>
+                    <span class="font-display font-bold text-lg tracking-wide">Business IT</span>
+                </div>
+            </div>
+
+            <div class="hidden">{{ page.sidebar_menu }}</div>
+
+            <nav class="flex-1 overflow-y-auto py-6 px-4 flex flex-col gap-1 custom-scrollbar">
+                <a href="/" class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-white/10 text-white font-medium shadow-sm mb-2">
+                    <span class="material-symbols-outlined text-[20px]">dashboard</span>
+                    <span>Dashboard</span>
+                </a>
+                
+                <div class="px-4 mt-4 mb-2 text-[10px] font-bold text-emerald-100/70 uppercase tracking-widest">Gestión</div>
+                <a href="/admin/content" class="flex items-center gap-3 px-4 py-2 rounded-lg text-emerald-50 hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">article</span>
+                    <span>Contenidos</span>
+                </a>
+                <a href="/admin/structure" class="flex items-center gap-3 px-4 py-2 rounded-lg text-emerald-50 hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">account_tree</span>
+                    <span>Estructura</span>
+                </a>
+                <a href="/admin/appearance" class="flex items-center gap-3 px-4 py-2 rounded-lg text-emerald-50 hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">palette</span>
+                    <span>Apariencia</span>
+                </a>
+
+                <div class="px-4 mt-4 mb-2 text-[10px] font-bold text-emerald-100/70 uppercase tracking-widest">Sistema</div>
+                <a href="/admin/people" class="flex items-center gap-3 px-4 py-2 rounded-lg text-emerald-50 hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">group</span>
+                    <span>Usuarios</span>
+                </a>
+                <a href="/admin/modules" class="flex items-center gap-3 px-4 py-2 rounded-lg text-emerald-50 hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">extension</span>
+                    <span>Ampliar</span>
+                </a>
+                <a href="/admin/config" class="flex items-center gap-3 px-4 py-2 rounded-lg text-emerald-50 hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">settings</span>
+                    <span>Configuración</span>
+                </a>
+                <a href="/admin/reports" class="flex items-center gap-3 px-4 py-2 rounded-lg text-emerald-50 hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">bar_chart</span>
+                    <span>Informes</span>
+                </a>
+                 <a href="/admin/help" class="flex items-center gap-3 px-4 py-2 rounded-lg text-emerald-50 hover:bg-white/10 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">help</span>
+                    <span>Ayuda</span>
+                </a>
+            </nav>
+
+            <div class="p-4 border-t border-white/10 bg-[#006256] shrink-0">
+                <div class="flex items-center gap-3">
+                    <div class="size-9 rounded-full bg-amber-400 text-amber-900 font-bold flex items-center justify-center text-xs">A</div>
+                    <div class="flex flex-col"><p class="text-xs font-bold">Admin</p><a href="/user/logout" class="text-[10px] text-emerald-200 hover:text-white underline">Salir</a></div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="ml-64 flex flex-col h-screen overflow-hidden bg-bg-body relative">
+            <header class="h-16 bg-white border-b border-slate-200 flex items-center justify-between px-8 shrink-0 z-40">
+                <div class="flex flex-col justify-center">
+                     <span class="text-[10px] font-bold text-primary tracking-widest uppercase mb-1">Vista Actual</span>
+                     <div class="breadcrumb-wrapper text-xs text-slate-500">{{ page.breadcrumb }}</div>
+                </div>
+                <div class="hidden md:flex items-center gap-4">
+                     <div class="relative">
+                        <span class="material-symbols-outlined absolute left-3 top-2 text-slate-400 text-[18px]">search</span>
+                        <input class="bg-slate-50 border border-slate-200 rounded-lg pl-9 pr-4 py-1.5 text-sm w-64 focus:ring-1 focus:ring-primary" placeholder="Buscar..." type="text"/>
+                    </div>
+                </div>
+            </header>
+            <div class="flex-1 overflow-y-auto p-8 scroll-smooth custom-scrollbar">
+                <div class="max-w-7xl mx-auto space-y-6">
+                    <div class="content-header-region flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-4 mb-6 min-h-[60px]">
+                        {{ page.content_header }}
+                    </div>
+                    {% if page.highlighted %}<div class="mb-4">{{ page.highlighted }}</div>{% endif %}
+                    <div class="min-h-[400px]">{{ page.content }}</div>
+                </div>
+            </div>
+        </main>
+    </body>
+    </html>
+
+{% else %}
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Business IT | Propiedades</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: { extend: { colors: { "brand": "#007a6c", "dark-bg": "#0b1215" }, fontFamily: { "display": ["Epilogue", "sans-serif"], "body": ["Manrope", "sans-serif"] } } }
+            }
+        </script>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Epilogue:wght@600;800&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    </head>
+    <body class="bg-slate-50 text-slate-800 font-body flex flex-col min-h-screen">
+        
+        <nav class="w-full py-5 px-8 flex justify-between items-center bg-white sticky top-0 z-50 border-b border-slate-100">
+            <div class="flex items-center gap-3">
+                <a href="/" class="flex items-center gap-3 text-slate-900 hover:text-brand transition-colors">
+                    <span class="material-symbols-outlined text-[24px] text-brand">apartment</span>
+                    <span class="font-display font-bold text-xl">Business IT</span>
+                </a>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-bold text-slate-500">
+                <a href="/" class="hover:text-brand">Inicio</a>
+                <a href="/propiedades" class="hover:text-brand">Propiedades</a>
+                <a href="/agentes" class="hover:text-brand">Agentes</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="/admin/content" class="text-xs font-bold bg-slate-100 px-3 py-2 rounded text-slate-600 hover:bg-brand hover:text-white transition-all">
+                    Panel Admin
+                </a>
+            </div>
+        </nav>
+
+        <main class="flex-grow">
+            <div class="bg-dark-bg py-12 px-6 mb-12">
+                <div class="max-w-7xl mx-auto">
+                    <h1 class="font-display font-bold text-3xl text-white">{{ page.title }}</h1>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-6 mb-20 min-h-[400px]">
+                {% if page.highlighted %}<div class="mb-6">{{ page.highlighted }}</div>{% endif %}
+                {{ page.content }} 
+            </div>
+        </main>
+
+        <footer class="bg-dark-bg text-slate-400 py-12 border-t border-slate-800">
+            <div class="max-w-7xl mx-auto px-6 text-center text-sm">
+                <p>&copy; 2026 Business IT. Real Estate Platform.</p>
+            </div>
+        </footer>
+    </body>
+    </html>
+{% endif %}

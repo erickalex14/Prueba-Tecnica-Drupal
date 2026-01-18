@@ -1,0 +1,18 @@
+uuid: 3f17a79b-7193-474a-a89e-a6a0ede1b2b1
+langcode: es
+status: true
+dependencies:
+  theme:
+    - inmo_theme
+id: inmo_theme_accionesprincipalesdeadministracion
+theme: inmo_theme
+region: content_header
+weight: 0
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de administración'
+  label_display: '0'
+  provider: core
+visibility: {  }

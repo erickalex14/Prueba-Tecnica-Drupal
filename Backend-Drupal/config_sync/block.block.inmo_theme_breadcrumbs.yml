@@ -1,0 +1,22 @@
+uuid: 702b0b42-8b49-4776-8d2e-c0f972fd0552
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - inmo_theme
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: inmo_theme_breadcrumbs
+theme: inmo_theme
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 0c67364f-187a-4362-b750-262072448444
+langcode: es
+status: true
+dependencies:
+  theme:
+    - inmo_theme
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: inmo_theme_primary_local_tasks
+theme: inmo_theme
+region: header
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Solapas principales'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

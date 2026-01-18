@@ -1,0 +1,14 @@
+uuid: 49f9bc2e-74f5-421e-b7db-357922c5a2b5
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.rol_basico
+  module:
+    - user
+id: user_remove_role_action.rol_basico
+label: 'Elimina el rol Rol Basico al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: rol_basico

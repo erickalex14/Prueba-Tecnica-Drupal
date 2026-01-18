@@ -1,0 +1,29 @@
+uuid: 4e176427-9715-4a3c-a651-dbf81609b687
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - inmo_theme
+id: inmo_theme_navegacionprincipal
+theme: inmo_theme
+region: sidebar_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navegación principal'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/admin/*\r\n/node/add/*\r\n/node/*/edit\r\n/user/*"

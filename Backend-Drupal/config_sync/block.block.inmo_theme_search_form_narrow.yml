@@ -1,0 +1,23 @@
+uuid: ccd14fe7-5361-4f41-991d-e53cec435e50
+langcode: es
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - inmo_theme
+_core:
+  default_config_hash: _nZjxxdypO6xrOAJkCYD81v0L7wh2zbCAVO7_C-UKIc
+id: inmo_theme_search_form_narrow
+theme: inmo_theme
+region: header
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Formulario de búsqueda (estrecho)'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

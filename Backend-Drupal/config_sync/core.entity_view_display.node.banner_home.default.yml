@@ -1,0 +1,33 @@
+uuid: dec4a94a-8cd5-4ae8-8261-3bd15a2cb09e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.banner_home.field_imagen_de_fondo
+    - node.type.banner_home
+  module:
+    - image
+    - user
+id: node.banner_home.default
+targetEntityType: node
+bundle: banner_home
+mode: default
+content:
+  field_imagen_de_fondo:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,11 @@
+uuid: 60253dcd-bad5-478d-9027-4f56596a1f51
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.agente
+id: node.agente
+target_entity_type_id: node
+target_bundle: agente
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,21 @@
+uuid: db30d6ab-f75d-4953-966b-aa7a05d8a910
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_de_disponibilidad
+    - node.type.inmueble
+  module:
+    - datetime
+id: node.inmueble.field_fecha_de_disponibilidad
+field_name: field_fecha_de_disponibilidad
+entity_type: node
+bundle: inmueble
+label: 'Fecha de Disponibilidad'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

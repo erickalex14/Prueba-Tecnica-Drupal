@@ -1,0 +1,25 @@
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+
+frontend-inmobiliaria/node_modules/
+frontend-inmobiliaria/.next/
+frontend-inmobiliaria/build/
+frontend-inmobiliaria/out/
+frontend-inmobiliaria/coverage/
+frontend-inmobiliaria/.env
+frontend-inmobiliaria/.env.local
+frontend-inmobiliaria/.env.*.local
+frontend-inmobiliaria/npm-debug.log*
+frontend-inmobiliaria/yarn-debug.log*
+frontend-inmobiliaria/yarn-error.log*
+
+
+Backend-Drupal/vendor/
+
+# Ignorar archivos de entorno y seguridad
+Backend-Drupal/.env

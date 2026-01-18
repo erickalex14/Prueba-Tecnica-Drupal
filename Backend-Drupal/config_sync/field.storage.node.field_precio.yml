@@ -1,0 +1,20 @@
+uuid: 7c8ede62-39fb-4101-a3d7-ef3f16e2dc5c
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_precio
+field_name: field_precio
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

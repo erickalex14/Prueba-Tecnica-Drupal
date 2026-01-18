@@ -1,0 +1,20 @@
+uuid: 166ed75b-05c0-4f61-b798-de6b6a49a900
+langcode: es
+status: true
+dependencies:
+  theme:
+    - inmo_theme
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: inmo_theme_primary_admin_actions
+theme: inmo_theme
+region: header
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de administración'
+  label_display: '0'
+  provider: core
+visibility: {  }

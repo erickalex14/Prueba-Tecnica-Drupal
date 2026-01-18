@@ -1,0 +1,11 @@
+uuid: e103a6d0-36f6-4fbf-b6b2-c1d802e5420c
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.inmueble
+id: node.inmueble
+target_entity_type_id: node
+target_bundle: inmueble
+default_langcode: site_default
+language_alterable: false
