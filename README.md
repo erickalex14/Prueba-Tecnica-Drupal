@@ -14,30 +14,34 @@ Este proyecto es una solución técnica completa para una plataforma inmobiliari
 ## Tabla de Contenidos
 1. [Visión General de la Arquitectura](#visión-general-de-la-arquitectura)
 2. [Fase 1: Infraestructura y Sistema Operativo](#1-infraestructura-y-sistema-operativo)
-  - [1.1 Especificaciones del Entorno Virtualizado](#11-especificaciones-del-entorno-virtualizado)
-  - [1.2 Gestión de Identidad y Accesos](#12-gestión-de-identidad-y-accesos)
-  - [1.3 Stack Tecnológico (LAMP)](#13-stack-tecnológico-lamp)
-  - [1.4 Seguridad y Persistencia de Datos](#14-seguridad-y-persistencia-de-datos)
-  - [1.5 Estructura de Archivos y Permisos](#15-estructura-de-archivos-y-permisos)
+    - [1.1 Especificaciones del Entorno Virtualizado](#11-especificaciones-del-entorno-virtualizado)
+    - [1.2 Gestión de Identidad y Accesos](#12-gestión-de-identidad-y-accesos)
+    - [1.3 Stack Tecnológico (LAMP)](#13-stack-tecnológico-lamp)
+    - [1.4 Seguridad y Persistencia de Datos](#14-seguridad-y-persistencia-de-datos)
+    - [1.5 Estructura de Archivos y Permisos](#15-estructura-de-archivos-y-permisos)
 3. [Fase 2: Backend - Drupal (Gestión de Contenido)](#2-backend---drupal-gestión-de-contenido)
-  - [2.1 Estrategia de Instalación](#21-estrategia-de-instalación)
-  - [2.2 Configuración del Servidor Web (Virtual Host)](#22-configuración-del-servidor-web-virtual-host)
-  - [2.3 Despliegue y Configuración Inicial](#23-despliegue-y-configuración-inicial)
-  - [2.4 Arquitectura de Contenidos (Content Modeling)](#24-arquitectura-de-contenidos-content-modeling)
-  - [2.5 Desarrollo de Tema Personalizado ("Inmobiliaria Aceternity")](#25-desarrollo-de-tema-personalizado-inmobiliaria-aceternity)
+    - [2.1 Estrategia de Instalación](#21-estrategia-de-instalación)
+    - [2.2 Configuración del Servidor Web (Virtual Host)](#22-configuración-del-servidor-web-virtual-host)
+    - [2.3 Despliegue y Configuración Inicial](#23-despliegue-y-configuración-inicial)
+    - [2.4 Arquitectura de Contenidos (Content Modeling)](#24-arquitectura-de-contenidos-content-modeling)
+    - [2.5 Desarrollo de Tema Personalizado ("Inmobiliaria Aceternity")](#25-desarrollo-de-tema-personalizado-inmobiliaria-aceternity)
 4. [Fase 3: API REST (Exposición de Datos)](#3-api-rest-exposición-de-datos)
-  - [3.1 Stack de Servicios Web](#31-stack-de-servicios-web)
-  - [3.2 Definición de Endpoints](#32-definición-de-endpoints)
-  - [3.3 Normalización de Datos (Data Normalization)](#33-normalización-de-datos-data-normalization)
-  - [3.4 Seguridad y Acceso](#34-seguridad-y-acceso)
-  - [3.5 Ejemplo de Payload (Respuesta JSON)](#35-ejemplo-de-payload-respuesta-json)
-  - [3.6 Seguridad de la API (CORS & Hardening)](#36-seguridad-de-la-api-cors--hardening)
+    - [3.1 Stack de Servicios Web](#31-stack-de-servicios-web)
+    - [3.2 Definición de Endpoints](#32-definición-de-endpoints)
+    - [3.3 Normalización de Datos (Data Normalization)](#33-normalización-de-datos-data-normalization)
+    - [3.4 Seguridad y Acceso](#34-seguridad-y-acceso)
+    - [3.5 Ejemplo de Payload (Respuesta JSON)](#35-ejemplo-de-payload-respuesta-json)
+    - [3.6 Seguridad de la API (CORS & Hardening)](#36-seguridad-de-la-api-cors--hardening)
 5. [Fase 4: Frontend - Next.js (Cliente)](#4-frontend---nextjs-cliente)
-  - [4.1 Stack Tecnológico](#41-stack-tecnológico)
-  - [4.2 Estructura del Proyecto](#42-estructura-del-proyecto)
-  - [4.3 Decisiones Técnicas Clave](#43-decisiones-técnicas-clave)
-  - [4.4 Configuración de Despliegue](#44-configuración-de-despliegue)
-  - [Instalación](#instalación)
+    - [4.1 Stack Tecnológico](#41-stack-tecnológico)
+    - [4.2 Estructura del Proyecto](#42-estructura-del-proyecto)
+    - [4.3 Decisiones Técnicas Clave](#43-decisiones-técnicas-clave)
+    - [4.4 Configuración de Despliegue](#44-configuración-de-despliegue)
+    - [Instalación](#instalación)
+6. [Entrega y Enlaces](#6-entrega-y-enlaces)
+    - [6.1 Repositorio de Código (Monorepo)](#61-repositorio-de-código-monorepo)
+    - [6.2 Máquina Virtual (Opcional)](#62-máquina-virtual-opcional)
+    - [6.3 Autor](#63-autor)
 
 ---
 
@@ -188,12 +192,12 @@ Siguiendo el requerimiento de arquitectura desacoplada, se implementó una estra
 
 ### 3.1 Stack de Servicios Web
 Se habilitaron los módulos del núcleo (Core) necesarios para la serialización y exposición de datos, evitando dependencias de terceros innecesarias:
-* [cite_start]**RESTful Web Services:** Motor base para la creación de recursos REST[cite: 30].
+* **RESTful Web Services:** Motor base para la creación de recursos REST.
 * **Serialization:** Permite la transformación de entidades de base de datos a formatos portables (JSON/XML).
-* [cite_start]**Views Data Export:** Utilizado para personalizar la salida de los endpoints y asegurar la estructura requerida[cite: 33].
+* **Views Data Export:** Utilizado para personalizar la salida de los endpoints y asegurar la estructura requerida.
 
 ### 3.2 Definición de Endpoints
-[cite_start]Se configuraron dos rutas principales bajo el prefijo `/api/v1/` para mantener un versionado semántico y ordenado[cite: 42]:
+Se configuraron dos rutas principales bajo el prefijo `/api/v1/` para mantener un versionado semántico y ordenado:
 
 | Recurso | Método | Endpoint (Ruta) | Descripción |
 | :--- | :---: | :--- | :--- |
@@ -201,21 +205,21 @@ Se habilitaron los módulos del núcleo (Core) necesarios para la serialización
 | **Agentes** | `GET` | `/api/v1/agentes` | Información de contacto y perfil del equipo de ventas. |
 
 ### 3.3 Normalización de Datos (Data Normalization)
-[cite_start]Para cumplir con el requisito de "Datos bien normalizados" [cite: 43] y facilitar la integración con React, se configuró la salida de Drupal Views para entregar **JSON Puro (Raw Data)** en lugar de HTML renderizado.
+Para cumplir con el requisito de "Datos bien normalizados" y facilitar la integración con React, se configuró la salida de Drupal Views para entregar **JSON Puro (Raw Data)** en lugar de HTML renderizado.
 
 **Optimizaciones realizadas:**
-1.  [cite_start]**Formato de Salida:** Se forzó el formato `JSON` en la configuración de serialización[cite: 36].
+1.  **Formato de Salida:** Se forzó el formato `JSON` en la configuración de serialización.
 2.  **Limpieza de Campos (Field Flattening):**
     * **Imágenes:** Se configuró el formateador como **"URL a la imagen"** (Image URL). Esto entrega una cadena de texto limpia (`/sites/default/files/...`) en lugar de una etiqueta HTML `<img>` completa, permitiendo al Frontend usar componentes optimizados como `Next/Image`.
     * **Referencias:** Los vínculos (como el Agente Responsable) se entregan como texto plano o IDs, eliminando los enlaces `<a>` automáticos de Drupal.
     * **IDs:** Se expuso el `nid` (Node ID) para ser utilizado como `key` única en el renderizado de listas en React.
 
 ### 3.4 Seguridad y Acceso
-* [cite_start]**Autenticación:** Se configuró el acceso público controlado para métodos `GET` (Lectura)[cite: 40].
+* **Autenticación:** Se configuró el acceso público controlado para métodos `GET` (Lectura).
 * **Permisos:** Se asignó el permiso *"Ver contenido publicado"* a la ruta de la API, permitiendo que el Frontend consuma los datos sin exponer rutas administrativas ni permitir métodos de escritura (`POST`, `PATCH`, `DELETE`) anónimos.
 
 ### 3.5 Ejemplo de Payload (Respuesta JSON)
-[cite_start]Estructura real obtenida del endpoint de Inmuebles[cite: 34]:
+Estructura real obtenida del endpoint de Inmuebles:
 
 ```json
 [
@@ -424,12 +428,12 @@ En cumplimiento con los requisitos de entrega de la prueba técnica, se adjuntan
 ## 6.1 Repositorio de Código (Monorepo)
 El código fuente completo (Backend Configuration + Frontend Next.js) se encuentra alojado en GitHub:
 
-[INSERTAR LINK DE TU GITHUB AQUÍ]
+[https://github.com/erickalex14/Prueba-Tecnica-Drupal]
 
 ## 6.2 Máquina Virtual (Opcional)
-Para facilitar la revisión del entorno de servidor configurado (Ubuntu + Apache + MySQL + Drupal live), se adjunta el enlace a la Máquina Virtual exportada (.ova):
+Para facilitar la revisión del entorno de servidor configurado (Ubuntu + Apache + MySQL + Drupal live), se adjunta el enlace a la Máquina Virtual exportada (.ova), clave de usuario "erick": Erick12345. :
 
-[INSERTAR LINK DE GOOGLE DRIVE/ONEDRIVE AQUÍ]
+[https://drive.google.com/file/d/1TXEuvzMpByU9jWRw5DygTmVYpdjVFs4W/view?usp=sharing]
 
 ## 6.3 Autor
 Nombre: Erick Alexander Chavarrea Macias
